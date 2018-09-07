@@ -26,12 +26,13 @@ Load the data and the tidyverse package in the code chunk below
 
 **Question 1 (4 points):** Provide an example of nominal, ordinal, interval, and ratio data within this dataset. Explain why each fits in the level of measurement you chose in a sentence or two . If you cannot find an example for one of these four data types (no nominal variables, for example), given an example of climate data that would fit this type.*
 
-{Your response goes here}
+I've written my response.
 
 **Question 2 task (4 points):** Let's make a very basic climate change model. Create a new variable (tmax_new), that adds two degrees Celsius to the existing maximum temperature for each county. Calculate the mean and standard deviation for the original maximum temperature variable and a new one two degrees higher, grouping these by each census region as shown above. How do these compare? Explain any similarities or differences you find.*
 
 ```{r question2}
 #Calculate the mean and sd here
+hist(mtcars$mpg)
 
 ```
 
