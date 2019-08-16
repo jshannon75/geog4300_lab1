@@ -3,9 +3,9 @@ Geog4/6300: Lab 1
 
 ## Loading data into R, data transformation, and summary statistics
 
-**Due:** Monday, Sept. 18
+**Due:** Friday, August 30
 
-**Value:** 30 points
+**Value:** 20 points
 
 **Overview:**
 
@@ -37,8 +37,8 @@ These labs are meant to be done collaboratively, but your final
 submission should demonstrate your own original thought (don’t just copy
 your classmate’s work or turn in identical assignments). Your answers to
 the lab questions should be typed in the provided RMarkdown template.
-You’ll then “knit” this to an HTML document and upload it to your class
-Github repo.
+You’ll then “knit” this to an Github document and upload it to your
+class Github repo.
 
 **Procedure:**
 
