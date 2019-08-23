@@ -4,12 +4,9 @@ Complete the lab assignment by filling in the response template. Knit it to a Gi
 
 Question 1 (out of 4):<p>
 Question 2 (out of 4):<p>
-Question 3 (out of 4):<p>
+Question 3 (out of 2):<p>
 Question 4 (out of 3):<p>
 Question 5 (out of 3):<p>
-Question 6 (out of 2):<p>
-Question 7 (out of 3):<p>
-Question 8 (out of 3):<p>
-Question 9 (out of 4):<p>
+Question 6 (out of 4):<p>
 <p>
-Total (out of 30): 
+Total (out of 20): 
