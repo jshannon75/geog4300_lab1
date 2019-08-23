@@ -46,27 +46,8 @@ Load the tidyverse package and import the data:
 
 ``` r
 library(tidyverse)
-daymet_cty_2005_2015 <- read_csv("data/Daymet_Cty_Summary_2005_2015.csv")
+daymet_cty_2005_2015 <- read_csv("https://github.com/jshannon75/geog4300/raw/master/data/Daymet_Cty_Summary_2005_2015.csv")
 ```
-
-    ## Parsed with column specification:
-    ## cols(
-    ##   gisjn_cty = col_character(),
-    ##   year = col_double(),
-    ##   month = col_character(),
-    ##   dayl = col_double(),
-    ##   srad = col_double(),
-    ##   tmax = col_double(),
-    ##   tmin = col_double(),
-    ##   vap_pres = col_double(),
-    ##   prcp = col_double(),
-    ##   CTY_NAME = col_character(),
-    ##   State = col_character(),
-    ##   Region = col_character(),
-    ##   Division = col_character(),
-    ##   Lon = col_double(),
-    ##   Lat = col_double()
-    ## )
 
 We can look at the first few rows of the dataset using the *head*
 function. We also use *kable* to format this

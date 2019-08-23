@@ -18,7 +18,7 @@ When you are done, click on the arrow next to "knit" and choose "Knit to github_
 
 Load the data and the tidyverse package in the code chunk below
 
-```{r data}
+```{r data message=FALSE}
 #Load the data here
 ```
 
