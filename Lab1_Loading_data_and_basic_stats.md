@@ -46,7 +46,7 @@ Load the tidyverse package and import the data:
 
 ``` r
 library(tidyverse)
-daymet_cty_2005_2015 <- read_csv("https://github.com/jshannon75/geog4300/raw/master/data/Daymet_Cty_Summary_2005_2015.csv")
+daymet_cty_2005_2015 <- read_csv("data/Daymet_Cty_Summary_2005_2015.csv")
 ```
 
 We can look at the first few rows of the dataset using the *head*
