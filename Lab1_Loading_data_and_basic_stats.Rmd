@@ -82,7 +82,7 @@ There are a lot of observations here, 413,820 to be exact. To get a better grasp
 ```
 
 
-***Question 5 (3 points):** If you wanted to look at these data as a table, you'd need to have it in wide format. Use the pivot_wider function to create a wide format version of the data frame you created in question 3. In this case, the rows should be counties, the columns should be the years, and the data in those columns should be mean minimum temperatures. Then call the whole table using kable.*
+***Question 5 (3 points):** If you wanted to look at these data as a table, you'd need to have it in wide format. Use the pivot_wider function to create a wide format version of the data frame you created in question 3. In this case, the rows should be states, the columns should be the years, and the data in those columns should be mean minimum temperatures. Then call the whole table using kable.*
 
 ```{r}
 #Your code goes here.
