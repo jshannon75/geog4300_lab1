@@ -14,8 +14,6 @@ library(knitr)
 
 ## Loading data into R, data transformation, and summary statistics
 
-**Due:** Friday, August 30
-
 **Value:** 20 points
 
 **Overview:**
