@@ -14,8 +14,6 @@ library(knitr)
 
 ## Loading data into R, data transformation, and summary statistics
 
-**Value:** 20 points
-
 **Overview:**
 
 This lab is intended to assess your ability to use R to load data and to generate basic descriptive statistics. You'll be using monthly weather data from the Daymet climate database (http://daymet.ornl.gov) for all counties in the United States over a 10 year period (2005-2015). These data are available on the Github repo for our course. The following  variables are provided:
@@ -53,46 +51,48 @@ We can look at the first few rows of the dataset using the *head* function. We a
 kable(head(daymet_data))
 ```
 
-***Question 1 (4 points):** After loading the file into R, pick TWO variables and determine whether they are nominal, ordinal, interval, and ratio data. Justify the classification you chose in a sentence or two for each one.*
+**Question 1:** After loading the file into R, pick TWO variables and determine whether they are nominal, ordinal, interval, and ratio data. Justify the classification you chose in a sentence or two for each one.*
 
 {Your response goes here.}
 
 There are a lot of observations here, 413,820 to be exact. To get a better grasp on it, we can use group_by and summarise in the tidyverse package, which we covered in class. This will allow us to identify the mean value for each year by county across the study period.
 
-***Question 2 (4 points):** Use group_by and summarise to calculate the mean minimum temperature for each year by county, also including State and Region as grouping variables. Your resulting dataset should show the value of tmin for each county in each year. Use the kable and head functions as shown above to call the resulting table.*
+**Question 2:** Use group_by and summarise to calculate the mean minimum temperature for each year by county, also including State and Region as grouping variables. Your resulting dataset should show the value of tmin for each county in each year. Use the kable and head functions as shown above to call the resulting table.*
 
 ```{r}
 #Your code goes here.
 ```
 
 
-***Question 3 (2 points):** What if we were only interested in the South Region? Filter the original data frame (daymet_data) to just include counties in this region. Then use group_by and summarise again to calculate the mean minimum temperature by year *for each state.* For 1 point extra credit, use the round function to include only 1 decimal point. You can type ?round in the console to find documentation on this function. Use kable and head to call the first few lines of the resulting table*
+**Question 3:** What if we were only interested in the South Region? Filter the original data frame (daymet_data) to just include counties in this region. Then use group_by and summarise again to calculate the mean minimum temperature by year *for each state.* For 1 point extra credit, use the round function to include only 1 decimal point. You can type ?round in the console to find documentation on this function. Use kable and head to call the first few lines of the resulting table*
 
 ```{r}
 #Your code goes here.
 ```
 
 
-***Question 4 (2 points):** To visualize the trends, we could use ggplot to visualize change in mean temperature over time. Create a line plot (geom_line) showing the state means you calculated in question 3. Use the color parameter to show separate colors for each state.*
+**Question 4:** To visualize the trends, we could use ggplot to visualize change in mean temperature over time. Create a line plot (geom_line) showing the state means you calculated in question 3. Use the color parameter to show separate colors for each state.*
 
 ```{r}
 #Your code goes here.
 ```
 
 
-***Question 5 (3 points):** If you wanted to look at these data as a table, you'd need to have it in wide format. Use the pivot_wider function to create a wide format version of the data frame you created in question 3. In this case, the rows should be states, the columns should be the years, and the data in those columns should be mean minimum temperatures. Then call the whole table using kable.*
+**Question 5:** If you wanted to look at these data as a table, you'd need to have it in wide format. Use the pivot_wider function to create a wide format version of the data frame you created in question 3. In this case, the rows should be states, the columns should be the years, and the data in those columns should be mean minimum temperatures. Then call the whole table using kable.*
 
 ```{r}
 #Your code goes here.
 ```
 
 
-***Question 6 (4 points):** Returning to the original dataset, create a data frame that shows the mean *maximum* temperature and mean precipitation for *all* states in 2015, also grouping by region. Then use ggplot to create a scatterplot (geom_point) for these two variables, coloring the points using the region variable.*
+**Question 6:** Returning to the original dataset, create a data frame that shows the mean *maximum* temperature and mean precipitation for *all* states in 2015, also grouping by region. Then use ggplot to create a scatterplot (geom_point) for these two variables, coloring the points using the region variable.*
 
 ```{r}
 #Your code goes here.
 ```
 
-***Question 7 (2 points)** In the space below, explain what each function in your code for question 6 does to the dataset in plain English. 
+***Question 7:** In the space below, explain what each function in your code for question 6 does to the dataset in plain English. 
 
 {Your response here.}
+
+**Lab reflection:** How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What were the biggest things you learned by completing it?
