@@ -26,7 +26,7 @@ This lab is intended to assess your ability to use R to load data and to generat
 * median_tmax: Median maximum recorded temperature (Celsius)
 * median_tmin: Median minimum recorded temperature (Celsius)
 * sum_prcp: Total recorded prcpitation for the month (mm)
-* cty_nameE: Name of the county
+* cty_name: Name of the county
 * state: state of the county
 * region: Census region (map: https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf)
 * division: Census division
