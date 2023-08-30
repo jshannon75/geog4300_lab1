@@ -9,6 +9,6 @@ Question 4:<p>
 Question 5:<p>
 Question 6:<p>
 Question 7:<p>
-Bonus:
+Extension:
 
 General comments: 
