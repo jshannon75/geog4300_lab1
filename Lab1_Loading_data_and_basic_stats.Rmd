@@ -84,7 +84,7 @@ There are a lot of observations here, 452,448, to be exact. To get a better gras
 ```
 
 
-**Question 6:** Let's assess the relationship of heat and precipitation by region. Returning to the original dataset, create a data frame that shows the mean *maximum* temperature and mean precipitation for *all* states in 2015, also including region as a subgroup. Then use ggplot to create a scatterplot (geom_point) for these two variables, coloring the points using the region variable.
+**Question 6:** Let's assess the relationship of heat and precipitation by region. Returning to the original dataset, create a data frame that shows the mean *maximum temperature* and *mean precipitation* for *all* states in 2015, also including region as a subgroup. Then use ggplot to create a scatterplot (geom_point) for these two variables, coloring the points using the region variable.
 
 ```{r}
 #Your code goes here.
@@ -94,7 +94,7 @@ There are a lot of observations here, 452,448, to be exact. To get a better gras
 
 {Your response here.}
 
-**Bonus question:** In script 1-3, we covered ways of working with the Daymet API. Create a script below that uses that daymetr package to download data from Daymet for a place (or places) of your choosing, uses a dplyr function (e.g., mutate, summarise, filter, etc.) to wrangle the data, and then visualizes it using ggplot. In addition to this code, write a short summary of a pattern that's evident in the data you visualized.
+**Lab extension:** In script 1-3, we covered ways of working with the Daymet API. Create a script below that uses that daymetr package to download data from Daymet for a place (or places) of your choosing. Then visualize the temporal pattern for a variable of your choosing in this place, for example, similar to what you did in question 4. Use a dplyr function (e.g., mutate, summarise, filter, etc.) to do any needed data wrangling and create a visual using ggplot. In addition to this code, write a short summary of a pattern that's evident in the data you visualized.
 
 ```{r}
 #Your code goes here
