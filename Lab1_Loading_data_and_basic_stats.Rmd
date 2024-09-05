@@ -50,7 +50,7 @@ We can look at the first few rows of the dataset using the *head* function. We a
 kable(head(daymet_data))
 ```
 
-**Question 1:** After loading the file into R, pick TWO variables and determine whether they are nominal, ordinal, interval, and ratio data using the course readings and lectures as reference. Justify each classification in a sentence or two.
+**Question 1:** After loading the file into R, pick TWO variables and determine whether they are nominal, ordinal, interval, and ratio data using the course readings and lectures as reference. Section 2.2 of the Lembo and McGrew book also addresses this (or it's easily available on the web). Justify each classification in a sentence or two.
 
 {Your response goes here.}
 
@@ -63,7 +63,7 @@ There are a lot of observations here, 452,448, to be exact. To get a better gras
 ```
 
 
-**Question 3:** What if we were only interested in the South Region? Filter the original data frame (daymet_data) to just include counties in this region. Then calculate the mean minimum temperature by year *for each state.* For an optional extra challenge, use the round function to include only 1 decimal point. You can type ?round in the console to find documentation on this function. Use kable and head to call the first few lines of the resulting table
+**Question 3:** Let's shift to the state level, focusing on those in the South Region? Filter the original data frame (daymet_data) to just include counties in this region. Then calculate the mean minimum temperature by year *for each state.* For an optional extra challenge, use the round function to include only 1 decimal point. You can type ?round in the console to find documentation on this function. Use kable and head to call the first few lines of the resulting table
 
 ```{r}
 #Your code goes here.
@@ -103,3 +103,5 @@ There are a lot of observations here, 452,448, to be exact. To get a better gras
 {Explanation goes here.}
 
 **Lab reflection:** How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What were the biggest things you learned by completing it?
+
+{Your response here}
