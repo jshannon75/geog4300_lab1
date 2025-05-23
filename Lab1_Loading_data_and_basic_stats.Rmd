@@ -16,9 +16,19 @@ library(knitr)
 
 Your name: 
 
-**Overview:**
+**Overview and lab criteria:**
 
-This lab is intended to assess your ability to use R to load data and to generate basic descriptive statistics. You'll be using monthly weather data from the Daymet climate database (http://daymet.ornl.gov) for all counties in the United States over a 11 year period (2010-2021). These data are available on the Github repo for our course. The following  variables are provided:
+This lab is intended to assess your ability to use R to load data and to generate basic descriptive statistics. For this lab to be marked complete, the following criteria must be met:
+
+* Your responses should show an ability to understand and explain the characteristics of different classes of data (nominal, ordinal, interval, ratio). (Task 1)
+* Your responses should show your ability to correctly use data wrangling functions from the tidyverse such as `group_by`, `summarize`, `filter`, and `mutate`. (Tasks 2, 3, 5, and 6)
+* Your responses should demonstrate your ability to visualize tabular datasets using `ggplot` in a variety of formats. (Tasks 4 and 6)
+* Your responses should show that you can explain the code you create in plain English. (Task 7)
+* Your submitted markdown document should use the conventions of Rmarkdown to display your results effectively, such as using `kable` for tables or the `head` function to show only the first rows of a data frame.
+
+**Data:**
+
+You'll be using monthly weather data from the Daymet climate database (http://daymet.ornl.gov) for all counties in the United States over a 11 year period (2010-2021). These data are available on the Github repo for our course. The following  variables are provided:
 
 * cty_txt: Code for joining to census data
 * year: Year of observation (with an initial "Y" to make it a character)
@@ -50,51 +60,51 @@ We can look at the first few rows of the dataset using the *head* function. We a
 kable(head(daymet_data))
 ```
 
-**Question 1:** After loading the file into R, pick TWO variables and determine whether they are nominal, ordinal, interval, and ratio data using the course readings and lectures as reference. Section 2.2 of the Lembo and McGrew book also addresses this (or it's easily available on the web). Justify each classification in a sentence or two.
+**Task 1:** After loading the file into R, pick TWO variables and determine whether they are nominal, ordinal, interval, and ratio data using the course readings and lectures as reference. Section 2.2 of the Lembo and McGrew book also addresses this (or it's easily available on the web). Justify each classification in a sentence or two.
 
 {Your response goes here.}
 
-There are a lot of observations here, 452,448, to be exact. To get a better grasp on it, we can use group_by and summarise in the tidyverse package, which we covered in class. This will allow us to identify the mean value for each year by county across the study period.
+There are a lot of observations here--452,448 to be exact. To get a better grasp on it, we can use group_by and summarise in the tidyverse package, which we covered in class. This will allow us to identify the mean value for each year by county across the study period.
 
-**Question 2:** Use group_by and summarise to calculate the mean minimum temperature for each year *by county* across all months, also including State and Region as grouping variables. Your resulting dataset should show the value of tmin for each county in each year. Use the kable and head functions as shown above to call the resulting table.
+**Task 2:** _Use group_by and summarise to calculate the mean minimum temperature for each year *by county* across all months, also including State and Region as grouping variables. Your resulting dataset should show the value of tmin for each county in each year. Use the kable and head functions as shown above to call the resulting table._
+
+```{r Task2}
+#Your code goes here.
+```
+
+**Task 3:** _Let's shift to the state level, focusing on those in the South Region. Filter the original data frame (daymet_data) to just include counties in this region. Then calculate the mean minimum temperature by year *for each state.* For an optional extra challenge, use the round function to include only 1 decimal point. You can type ?round in the console to find documentation on this function. Use kable and head to call the first few lines of the resulting table_
+
+```{r Task3}
+#Your code goes here.
+```
+
+
+**Task 4:** _To visualize the trends, we could use ggplot to visualize change in mean temperature over time. Create a line plot (geom_line) showing the state means you calculated in question 3. Use the color parameter to show separate colors for each state. You may also need to define the state as a group in the aesthetic parameter._
+
+```{r Task 4}
+#Your code goes here.
+```
+
+
+**Task 5:** _If you wanted to look at these data as a table, you'd need to have it in wide format. Use the pivot_wider function to create a wide format version of the data frame you created in question 3. In this case, the rows should be states, the columns should be the years, and the data in those columns should be mean minimum temperatures. Then call the *whole table* using kable._
+
+```{r Task5}
+#Your code goes here.
+```
+
+
+**Task 6:** _Let's assess the relationship of heat and precipitation by region. Returning to the original dataset, create a data frame that shows the mean *maximum temperature* and *mean precipitation* for *all* states in 2015, also including region as a subgroup. Then use ggplot to create a scatterplot (geom_point) for these two variables, coloring the points using the region variable._
 
 ```{r}
 #Your code goes here.
 ```
 
-
-**Question 3:** Let's shift to the state level, focusing on those in the South Region? Filter the original data frame (daymet_data) to just include counties in this region. Then calculate the mean minimum temperature by year *for each state.* For an optional extra challenge, use the round function to include only 1 decimal point. You can type ?round in the console to find documentation on this function. Use kable and head to call the first few lines of the resulting table
-
-```{r}
-#Your code goes here.
-```
-
-
-**Question 4:** To visualize the trends, we could use ggplot to visualize change in mean temperature over time. Create a line plot (geom_line) showing the state means you calculated in question 3. Use the color parameter to show separate colors for each state. You may also need to define the state as a group in the aesthetic parameter.
-
-```{r}
-#Your code goes here.
-```
-
-
-**Question 5:** If you wanted to look at these data as a table, you'd need to have it in wide format. Use the pivot_wider function to create a wide format version of the data frame you created in question 3. In this case, the rows should be states, the columns should be the years, and the data in those columns should be mean minimum temperatures. Then call the *whole table* using kable.
-
-```{r}
-#Your code goes here.
-```
-
-
-**Question 6:** Let's assess the relationship of heat and precipitation by region. Returning to the original dataset, create a data frame that shows the mean *maximum temperature* and *mean precipitation* for *all* states in 2015, also including region as a subgroup. Then use ggplot to create a scatterplot (geom_point) for these two variables, coloring the points using the region variable.
-
-```{r}
-#Your code goes here.
-```
-
-**Question 7:** In the space below, explain what each function in your code for question 6 does to the dataset in plain English. 
+**Task 7:** _In the space below, explain what each function in your code for question 6 does to the dataset in plain English._
 
 {Your response here.}
 
-**Lab extension:** In script 1-3, we covered ways of working with the Daymet API. Create a script below that uses that daymetr package to download data from Daymet for a place (or places) of your choosing. Then visualize the temporal pattern for a variable of your choosing in this place, for example, similar to what you did in question 4. Use a dplyr function (e.g., mutate, summarise, filter, etc.) to do any needed data wrangling and create a visual using ggplot. In addition to this code, write a short summary of a pattern that's evident in the data you visualized.
+**Challenge question** 
+In script 1-3, we covered ways of working with the Daymet API. Create a script below that uses that daymetr package to download data from Daymet for a place (or places) of your choosing. Then visualize the temporal pattern for a variable of your choosing in this place, for example, similar to what you did in question 4. Use a dplyr function (e.g., mutate, summarise, filter, etc.) to do any needed data wrangling and create a visual using ggplot. In addition to this code, write a short summary of a pattern that's evident in the data you visualized.
 
 ```{r}
 #Your code goes here
@@ -102,6 +112,12 @@ There are a lot of observations here, 452,448, to be exact. To get a better gras
 
 {Explanation goes here.}
 
-**Lab reflection:** How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What were the biggest things you learned by completing it?
+### Final submission stuff
+
+**Disclosure of assistance:** Besides class materials, what other sources of assistance did you use while completing this lab? These can include input from classmates, relevant material identified through web searches (e.g., Stack Overflow), or assistance from ChatGPT or other AI tools. How did these sources support your own learning in completing this lab?
+
+{Response here.}
+
+**Lab reflection:** How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What are the biggest things you learned by completing it?
 
 {Your response here}
